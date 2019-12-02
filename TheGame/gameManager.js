@@ -3,6 +3,8 @@
 function setup(){
     drawPlayerSprite();
 
+    enemyNow();
+
     createCanvas(400,400);
 }
 
@@ -14,4 +16,10 @@ function draw(){
     playerOneMovement();
 
     playerTwoMovement();
+
+    enemyMovement();
+
+    enemyAttack();
+
+
 }
