@@ -7,7 +7,9 @@ function setup(){
 
     enemyNow();
 
-    createCanvas(800,600);
+    createCanvas(windowWidth,windowHeight);
+
+    walls();
 }
 
 function draw(){
