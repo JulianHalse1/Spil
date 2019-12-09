@@ -4,6 +4,8 @@ var speed = 2.5;
 var ply1;
 var ply2;
 
+
+
 function playerOneMovement(){
     if(keyDown(87)){
         ply1.position.y = ply1.position.y - speed;
@@ -43,9 +45,11 @@ function playerTwoMovement(){
 }
 
 function drawPlayerSprite(){
-    ply1=createSprite(100,100,50,50);
+    ply1=createSprite(50,400,50,50);
     ply1.shapeColor = color(0,0,255);
 
-    ply2=createSprite(300,300,50,50);
+    ply2=createSprite(50,100,50,50);
     ply2.shapeColor = color(255,0,0);
 }
+
+

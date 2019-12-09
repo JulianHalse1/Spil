@@ -1,11 +1,13 @@
 // Dette er vores gamemanger. Vi sætter funtionerne ind i setup/draw funtionen.
+var cooldown = 60;
+
 
 function setup(){
     drawPlayerSprite();
 
     enemyNow();
 
-    createCanvas(400,400);
+    createCanvas(800,600);
 }
 
 function draw(){
@@ -21,5 +23,8 @@ function draw(){
 
     enemyAttack();
 
+    death();
+
+    cooldown = cooldown - 1;
 
 }
