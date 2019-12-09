@@ -29,4 +29,6 @@ function draw(){
 
     cooldown = cooldown - 1;
 
+    wallDetection();
+
 }
