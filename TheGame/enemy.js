@@ -1,6 +1,9 @@
-var enemySmallX = 200;
-var enemySmallY = 200;
+var enemySmallX = 500;
+var enemySmallY = 500;
 var spr;
+var health1 = 3;
+var health2 = 3;
+var damage = 1;
 
 
 
@@ -16,18 +19,41 @@ function enemyNow() {
 
 
 
+
+
+
 function enemyMovement() {
+    
+    
+    
+    if(ply1.position.x && ply1.position.y <= ply2.position.x && ply2.position.y){
     spr.attractionPoint(2, ply1.position.x, ply1.position.y);
       drawSprites();
+    }
+    if(ply1.position.x && ply1.position.y >= ply2.position.x && ply2.position.y){
+        spr.attractionPoint(2, ply2.position.x, ply2.position.y);
+        }
+
+        
+    
 }
 
 function enemyAttack() {
-    if(spr.collide(ply1)){
-        ply1.shapeColor = color(255, 0, 0);
+    if(spr.collide(ply1) && cooldown <= 0){
+        health1 = health1 - damage;
+        cooldown = 60;
     }
-    if(spr.collide(ply2)){
-        ply2.shapeColor = color(0, 255, 0);
+    if(spr.collide(ply2) && cooldown <= 0){
+        health2 = health2 - damage;
+        cooldown = 60;
     }
 }
 
-
+function death(){
+    if(health1 <= 0){
+        ply1.remove();
+    }
+    if(health2 <= 0){
+        ply2.remove();
+    }
+}
