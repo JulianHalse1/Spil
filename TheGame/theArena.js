@@ -1,6 +1,7 @@
 var box1,box2,box3,box4;
 
 function walls(){
+    //draw walls in start function
     box1 = createSprite(windowWidth/2,0,windowWidth,10);
     box2 = createSprite(windowWidth/2,windowHeight,windowWidth,10);
     box3 = createSprite(0,windowHeight/2,10,windowHeight);
@@ -8,6 +9,7 @@ function walls(){
 }
 
 function wallDetection(){
+    //player 1 and player collides with the walls
     ply1.collide(box1);
     ply2.collide(box1);
 
