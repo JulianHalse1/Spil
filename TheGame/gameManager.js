@@ -21,5 +21,6 @@ function draw(){
 
     enemyAttack();
 
+    drawPlayerOneAttack();
 
 }

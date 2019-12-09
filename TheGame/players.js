@@ -3,6 +3,7 @@ var speed = 2.5;
 
 var ply1;
 var ply2;
+var attackDetect; 
 
 function playerOneMovement(){
     if(keyDown(87)){
@@ -48,4 +49,13 @@ function drawPlayerSprite(){
 
     ply2=createSprite(300,300,50,50);
     ply2.shapeColor = color(255,0,0);
+}
+
+function drawPlayerOneAttack(){
+    if(keyDown(69)){
+        print("I am Here");
+        fill(255,30,30);
+        arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD); 
+    }
+
 }
