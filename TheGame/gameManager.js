@@ -5,7 +5,9 @@ function setup(){
 
     enemyNow();
 
-    createCanvas(400,400);
+    createCanvas(windowWidth,windowHeight);
+
+    walls();
 }
 
 function draw(){
@@ -21,5 +23,5 @@ function draw(){
 
     enemyAttack();
 
-
+    wallDetection();
 }
