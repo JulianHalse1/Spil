@@ -4,6 +4,7 @@ var spr;
 var health1 = 3;
 var health2 = 3;
 var damage = 1;
+var enemyHp = 3;
 
 
 
@@ -55,5 +56,8 @@ function death(){
     }
     if(health2 <= 0){
         ply2.remove();
+    }
+    if(enemyHp <= 0){
+        enemy.remove();
     }
 }

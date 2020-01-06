@@ -3,7 +3,7 @@ var speed = 2.5;
 
 var ply1;
 var ply2;
-var attackDetect; 
+var attack; 
 
 function playerOneMovement(){
     if(keyDown(87)){
@@ -53,9 +53,12 @@ function drawPlayerSprite(){
 
 function drawPlayerOneAttack(){
     if(keyDown(69)){
-        print("I am Here");
-        fill(255,30,30);
-        arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD); 
+        attack = fill(255,30,30),arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD);
+    }
+    if(attack.collide(enemyNow)&&cooldown<=0){
+        enemyHp = enemyHp - damage
+        cooldown = 5
+     }    
     }
 
 }
