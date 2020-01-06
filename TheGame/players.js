@@ -55,10 +55,5 @@ function drawPlayerOneAttack(){
     if(keyDown(69)){
         attack = fill(255,30,30),arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD);
     }
-    if(attack.collide(enemyNow)&&cooldown<=0){
-        enemyHp = enemyHp - damage
-        cooldown = 5
-     }    
     }
 
-}
