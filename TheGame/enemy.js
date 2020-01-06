@@ -4,12 +4,12 @@ var spr;
 var health1 = 3;
 var health2 = 3;
 var damage = 1;
-
+var cooldown = 60;
 
 
 function enemyNow() {
     spr = createSprite(
-        enemySmallX, enemySmallY, 40, 40);
+        enemySmallX, enemySmallY, 32, 32);
       spr.shapeColor = color(255);
       spr.rotateToDirection = true;
       spr.maxSpeed = 2;
