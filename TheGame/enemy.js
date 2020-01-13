@@ -4,7 +4,9 @@ var spr;
 var health1 = 3;
 var health2 = 3;
 var damage = 1;
+var enemyHp = 3;
 var cooldown = 60;
+
 
 
 function enemyNow() {
@@ -14,7 +16,7 @@ function enemyNow() {
       spr.rotateToDirection = true;
       spr.maxSpeed = 2;
       spr.friction = 0.60;
-      
+
 }
 
 
@@ -23,9 +25,9 @@ function enemyNow() {
 
 
 function enemyMovement() {
-    
-    
-    
+
+
+
     if(ply1.position.x && ply1.position.y <= ply2.position.x && ply2.position.y){
     spr.attractionPoint(2, ply1.position.x, ply1.position.y);
       drawSprites();
@@ -34,8 +36,8 @@ function enemyMovement() {
         spr.attractionPoint(2, ply2.position.x, ply2.position.y);
         }
 
-        
-    
+
+
 }
 
 function enemyAttack() {
@@ -55,5 +57,8 @@ function death(){
     }
     if(health2 <= 0){
         ply2.remove();
+    }
+    if(enemyHp <= 0){
+        enemy.remove();
     }
 }

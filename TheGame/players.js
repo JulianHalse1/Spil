@@ -3,14 +3,14 @@ var speed = 2.5;
 
 var ply1;
 var ply2;
-var attackDetect; 
+var attackDetect;
 var healthPly1_1;
 var healthPly1_2;
 var healthPly1_3;
 var healthPly2_1;
 var healthPly2_2;
 var healthPly2_3;
-
+var attack;
 function playerOneMovement(){
     if(keyDown(87)){
         ply1.position.y = ply1.position.y - speed;
@@ -59,9 +59,8 @@ function drawPlayerSprite(){
 
 function drawPlayerOneAttack(){
     if(keyDown(69)){
-        print("I am Here");
-        fill(255,30,30);
-        arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD); 
+        attack = fill(255,30,30),arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD);
+    }
     }
 
 }
@@ -75,20 +74,20 @@ function healthbar(){
 
     healthPly1_2=createSprite(100, 700, 16, 16);
     healthPly1_2.shapeColor = color(255, 0, 0);
-    
+
     healthPly1_3=createSprite(150, 700, 16, 16);
     healthPly1_3.shapeColor = color(255, 0, 0);
-    
+
     healthPly2_1=createSprite(1490, 700, 16, 16);
     healthPly2_1.shapeColor = color(255, 0, 0);
 
     healthPly2_2=createSprite(1440, 700, 16, 16);
     healthPly2_2.shapeColor = color(255, 0, 0);
-    
+
     healthPly2_3=createSprite(1390, 700, 16, 16);
     healthPly2_3.shapeColor = color(255, 0, 0);
 }
- 
+
     function healthbarGoingDown(){
 
         if(health1 <= 2){
@@ -102,7 +101,7 @@ function healthbar(){
         if(health1 <= 0){
             healthPly1_1.remove();
         }
-        
+
         if(health2 <= 2){
             healthPly2_3.remove();
         }
@@ -115,7 +114,3 @@ function healthbar(){
             healthPly2_1.remove();
         }
     }
-
-
-
-
