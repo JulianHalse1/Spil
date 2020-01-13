@@ -57,12 +57,38 @@ function drawPlayerSprite(){
     ply2.shapeColor = color(255,0,0);
 }
 
-function drawPlayerOneAttack(){
+
+
+
+//generates an attack (displayed with a red arc)
+function ply1Attack(){
     if(keyDown(69)){
         attack = fill(255,30,30),arc(ply1.position.x,ply1.position.y,70,70,-PI,0,CHORD);
     }
-    }
+}
+//checks if ply1Attack collides with an enemy 
+function ply1AttackCollide(ply1Attack,enemy){
+    return !(
+        ((ply1Attack.y + ply1Attack.height) < (enemy.y))||
+        (ply1Attack.y > (enemy.y+enemy.height)) ||
+        ((ply1Attack.x + ply1Attack.width) < enemy.x) ||
+        (ply1Attack.x > (enemy.x + enemy.width))   
+    );
+}
 
+function ply2Attack(){
+    if(keyDown(69)){
+        attack = fill(255,30,30),arc(ply2.position.x,ply2.position.y,70,70,-PI,0,CHORD);
+    }
+}
+//checks if ply2Attack collides with an enemy
+function ply2AttackCollide(ply2Attack,enemy){
+    return !(
+        ((ply2Attack.y + ply2Attack.height) < (enemy.y))||
+        (ply2Attack.y > (enemy.y+enemy.height)) ||
+        ((ply2Attack.x + ply2Attack.width) < enemy.x) ||
+        (ply2Attack.x > (enemy.x + enemy.width))   
+    );
 }
 
 
