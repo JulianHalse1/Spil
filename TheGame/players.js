@@ -63,7 +63,7 @@ function drawPlayerOneAttack(){
     }
     }
 
-}
+
 
 
 function healthbar(){
