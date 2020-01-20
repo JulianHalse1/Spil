@@ -28,8 +28,12 @@ function draw(){
     wallDetection();
 
     enemySpawnFor();
-    
+
     healthbarGoingDown();
 
     ply1Attack();
+    //ply1AttackCollide();
+
+    ply2Attack();
+    //ply2AttackCollide();
 }
