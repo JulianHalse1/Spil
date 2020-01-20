@@ -22,6 +22,8 @@ function playerOneMovement(){
         ply1.position.x = ply1.position.x - speed;
         print("left");
     }
+    //player1 collide with player2
+    ply1.collide(ply2);
 }
 
 function playerTwoMovement(){
@@ -41,6 +43,8 @@ function playerTwoMovement(){
         ply2.position.x = ply2.position.x - speed;
         print("left");
     }
+    //player2 collide with player1
+    ply2.collide(ply1);
 }
 
 function drawPlayerSprite(){

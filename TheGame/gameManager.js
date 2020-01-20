@@ -5,11 +5,11 @@ var cooldown = 60;
 function setup(){
     drawPlayerSprite();
 
-    enemyNow();
-
     createCanvas(windowWidth,windowHeight);
 
     walls();
+
+    enemySpawnTimer();
 }
 
 function draw(){
@@ -21,15 +21,11 @@ function draw(){
 
     playerTwoMovement();
 
-    enemyMovement();
-
-    enemyAttack();
-
     drawPlayerOneAttack();
-    death();
 
     cooldown = cooldown - 1;
 
     wallDetection();
 
+    enemySpawnFor();
 }
