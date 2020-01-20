@@ -31,4 +31,9 @@ function draw(){
     
     healthbarGoingDown();
 
+    ply1Attack();
+    //ply1AttackCollide();
+
+    ply2Attack();
+    //ply2AttackCollide();
 }
