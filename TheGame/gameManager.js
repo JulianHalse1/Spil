@@ -1,5 +1,5 @@
 // Dette er vores gamemanger. Vi sætter funtionerne ind i setup/draw funtionen.
-var cooldown = 60;
+
 
 
 function setup(){
@@ -10,22 +10,34 @@ function setup(){
     walls();
 
     enemySpawnTimer();
+
+    healthbar();
+    
 }
 
 function draw(){
-    background(50)
 
-    drawSprites();
+    background(50)
 
     playerOneMovement();
 
     playerTwoMovement();
 
-    drawPlayerOneAttack();
+    ply1Attack();
+
+    enemyMovement();
+
+    enemyAttack();
+    
+    death();
 
     cooldown = cooldown - 1;
 
     wallDetection();
 
     enemySpawnFor();
+
+    healthbarGoingDown();
+    drawSprites();
+
 }

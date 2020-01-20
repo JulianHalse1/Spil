@@ -1,4 +1,5 @@
 
+
  class enemy{
 
     constructor(){
@@ -15,10 +16,9 @@
             this.spr.rotateToDirection = true;
             this.spr.maxSpeed = 2;
             this.spr.friction = 0.60;
-      
+
 }
     enemyMovement() {
-
     if(ply1.position.x && ply1.position.y <= ply2.position.x && ply2.position.y){
     this.spr.attractionPoint(2, ply1.position.x, ply1.position.y);
       drawSprites();
@@ -26,7 +26,7 @@
     if(ply1.position.x && ply1.position.y >= ply2.position.x && ply2.position.y){
     this.spr.attractionPoint(2, ply2.position.x, ply2.position.y);
         }
-}
+    }
     enemyAttack() {
     if(this.spr.collide(ply1) && cooldown <= 0){
         this.health1 = this.health1 - this.damage;
@@ -43,6 +43,9 @@
     }
     if(this.health2 <= 0){
         ply2.remove();
+    }
+    if(enemyHp <= 0){
+        enemy.remove();
     }
 }
 
