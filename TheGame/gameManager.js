@@ -25,12 +25,12 @@ function draw(){
 
     playerTwoMovement();
 
+    ply1Attack();
+
     enemyMovement();
 
     enemyAttack();
-
-    drawPlayerOneAttack();
-
+    
     death();
 
     cooldown = cooldown - 1;
@@ -39,5 +39,7 @@ function draw(){
 
     healthbarGoingDown();
     drawSprites();
+
+    
 
 }
