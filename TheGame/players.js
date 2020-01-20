@@ -11,6 +11,9 @@ var healthPly2_1;
 var healthPly2_2;
 var healthPly2_3;
 var attack;
+var health1 = 3;
+var health2 = 3;
+
 function playerOneMovement(){
     if(keyDown(87)){
         ply1.position.y = ply1.position.y - speed;

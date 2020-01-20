@@ -10,6 +10,8 @@ function setup(){
     walls();
 
     enemySpawnTimer();
+
+    healthbar();
 }
 
 function draw(){
@@ -26,4 +28,7 @@ function draw(){
     wallDetection();
 
     enemySpawnFor();
+    
+    healthbarGoingDown();
+
 }

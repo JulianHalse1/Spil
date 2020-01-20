@@ -5,8 +5,6 @@
     this.enemySmallX = 500;
     this.enemySmallY = 500;
     this.spr; //enemy
-    this.health1 = 3;
-    this.health2 = 3;
     this.damage = 1;
 
         this.spr = createSprite(
@@ -29,19 +27,19 @@
 }
     enemyAttack() {
     if(this.spr.collide(ply1) && cooldown <= 0){
-        this.health1 = this.health1 - this.damage;
+        health1 = health1 - this.damage;
         cooldown = 60;
     }
     if(this.spr.collide(ply2) && cooldown <= 0){
-        this.health2 = this.health2 - this.damage;
+        health2 = health2 - this.damage;
         cooldown = 60;
     }
 }
     death(){
-    if(this.health1 <= 0){
+    if(health1 <= 0){
         ply1.remove();
     }
-    if(this.health2 <= 0){
+    if(health2 <= 0){
         ply2.remove();
     }
 }
